@@ -145,7 +145,7 @@
 // const array = [];
 // const arrayLength = 5
 // for (let i = 0; i < arrayLength; i += 1) {
-//   array.push(random(-10, -1));
+//   array.push(random(1, 10));
 // }
 // for (let j = 0; j < arrayLength; j += 1) {
 //   array.push(random(1, 10));
@@ -171,13 +171,91 @@
 //   return false;
 // };
 // arrayNumber(array, 8);
+
 // Найти количество четных чисел в массиве.
+// const array = [ 7, 8, 4, 1, 8, 4, 5, 9, 6, 4 ];
+// const isEven = (arr) => {
+//   let index = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % 2 === 0) {
+//       index += 1;
+//     }
+//   }
+//   console.log(index);
+// };
+// isEven(array)
 
 // Найти количество чисел в массиве, которые делятся на 3, но не делятся на 7.
+// const array = [ 7, 8, 4, 1, 8, 4, 5, 9, 6, 4, 21 ];
+
+// const arrNum = (arr) => {
+//   let index = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % 3 === 0 && arr[i] % 7 !== 0) {
+//       index += 1;
+//     }
+//   }
+//   console.log(index)
+// };
+// arrNum(array);
+
 // Определите, каких чисел в массиве больше: которые делятся на первый элемент массива или которые делятся на последний элемент массива.
+// const array = [ 7, 8, 4, 1, 8, 4, 5, 9, 6, 4 ];
+// const whatMore = (arr) => {
+//   let firstIndexArray = 0;
+//   let lastIndexArray = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % arr[0] === 0) {
+//       firstIndexArray += 1;
+//     } else if (arr[i] % arr[arr.length - 1] === 0) {
+//       lastIndexArray += 1;
+//     }
+//   }
+//   if (firstIndexArray >= lastIndexArray) return true;
+//   return false;
+// };
+// whatMore(array);
+
 // Найдите сумму и произведение элементов массива.
+// const array = [ 7, 8, 4, 1, 8, 4, 5, 9, 6, 4 ];
+// const amountWorks = (arr) => {
+//   let amount = 0;
+//   let works = 1;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     amount += arr[i];
+//     works *= arr[i];
+//   }
+//   console.log(amount);
+//   console.log(works);
+// };
+// amountWorks(array);
+
 // Найдите сумму четных чисел массива.
+// const array = [ 7, 8, 4, 1, 8, 4, 5, 9, 6, 4 ];
+// const sumOfEvenNumbers = (arr) => {
+//   let evenNumbers = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % 2 === 0) {
+//       evenNumbers += arr[i];
+//     }
+//   }
+//   return evenNumbers;
+// };
+// sumOfEvenNumbers(array);
+
 // Найдите сумму нечетных чисел массива, которые не превосходят 11.
+// const array = [12, 11, 4, 22, 15, 17, 13, 5, 8, 10, 3, 7, 9];
+// const sumOfOddNumbers = (arr) => {
+//   let oddNumbers = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] <= 11 && arr[i] % 2 !== 0) {
+//       oddNumbers += arr[i];
+//     }
+//   }
+//   return oddNumbers;
+// };
+// sumOfOddNumbers(array);
+
 // Найдите сумму чисел массива, которые расположены до первого четного числа массива. Если четных чисел в массиве нет, то найти сумму всех чисел за исключением крайних.
 // Найдите сумму чисел массива, которые стоят на четных местах.
 // Найдите сумму чисел массива, которые стоят на нечетных местах и при этом превосходят сумму крайних элементов массива.
@@ -207,4 +285,4 @@
 // Определите, есть ли в массиве повторяющиеся элементы.
 // В данном массиве найдите наибольшую серию подряд идущих элементов, расположенных по возрастанию.
 // В массиве найдите количество серий из четверок подряд идущих попарно различных элементов.
-// Определите, можно ли вычеркнуть из данного массива одно число так, чтобы оставшиеся числа оказались упорядоченными по возрастанию.s
+// Определите, можно ли вычеркнуть из данного массива одно число так, чтобы оставшиеся числа оказались упорядоченными по возрастанию.
