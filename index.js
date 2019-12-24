@@ -257,16 +257,129 @@
 // sumOfOddNumbers(array);
 
 // Найдите сумму чисел массива, которые расположены до первого четного числа массива. Если четных чисел в массиве нет, то найти сумму всех чисел за исключением крайних.
+// const array = [15, 17, 13, 5, 8, 10, 3, 7, 9];
+// const array1 = [2, 4, 6, 8]
+// const sumNumbers = (arr) => {
+//   let numbersOdd = 0;
+//   let numbersEven = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % 2 === 0) break;
+//     numbersOdd += arr[i];
+//     console.log(numbersOdd);
+//   }
+//   if (numbersOdd === 0) {
+//     for( let i = 1; i < arr.length - 1; i += 1) {
+//       numbersEven += arr[i];
+//     }
+//   console.log(numbersEven)
+//   }
+// };
+// sumNumbers(array);
+
 // Найдите сумму чисел массива, которые стоят на четных местах.
+// const array = [15, 17, 13, 5, 8, 10, 3, 7, 9];
+// let sumEvenArray = 0;
+// for (let i = 0; i < array.length; i += 2) {
+//   sumEvenArray += array[i];
+// }
+// console.log(sumEvenArray);
+
 // Найдите сумму чисел массива, которые стоят на нечетных местах и при этом превосходят сумму крайних элементов массива.
-// Дан массив x из n элементов. Найдите x1−x2+x3−…−xn−1+xn.
-// Дан массив x из n элементов. Найдите x1xn+x2xn−1+…+xnx1.
-// Дан массив x из n элементов. Найдите xn(xn+xn−1)(xn+xn−1+xn−2)…(xn+…+x1).
+// const array = [10, 17, 13, 20, 8, 11, 3, 7, 9];
+// const sumOdd = (arr) => {
+//   let sumOddArray = 0;
+//   for (let i = 1; i < arr.length; i += 2) {
+//     if (arr[i] > arr[0] && arr[i] > arr[arr.length - 1]) {
+//       sumOddArray += arr[i];
+//     }
+//   }
+//   return sumOddArray
+// };
+// sumOdd(array);
+
 // Найти наибольший элемент массива.
+// const array = [10, 17, 21, 20, 8, 11, 3, 7, 9];
+// const greatestElement = (arr) => {
+//   let element = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] > element) {
+//       element = arr[i];
+//     }
+//   }
+//   return element;
+// };
+// greatestElement(array);
+
 // Найдите сумму наибольшего и наименьшего элементов массива.
+// const array = [10, 17, 21, 20, 8, 11, 3, 7, 9];
+// const sumArr = (arr) => {
+//   let greatest = 0;
+//   let smallest = arr[0];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] > greatest) {
+//       greatest = arr[i];
+//     }
+//     if (arr[i] < smallest) {
+//       smallest = arr[i];
+//     }
+//   }
+//   console.log(greatest)
+//   console.log(smallest)
+//   return greatest + smallest;
+// };
+// sumArr(array);
+
 // Найдите количество элементов массива, которые отличны от наибольшего элемента не более чем на 10%.
+// const array = [10, 17, 21, 20, 19, 8, 11, 3, 7, 9];
+// const findNumberPercentages = (arr) => {
+//   let greatest = 0;
+//   let result = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] > greatest) {
+//       greatest = arr[i];
+//     }
+//     let difference = greatest * 0.1;
+//     console.log(difference)
+//     if (greatest - arr[i] <= difference) {
+//       result += 1;
+//     }
+//   }
+//   return result;
+// };
+// findNumberPercentages(array);
+
 // Найдите наименьший четный элемент массива.
+// const array = [11, 8, 6, 21, 19, 8, 11, 3, 7, 9];
+// const smallestElement = (arr) => {
+//   let smallest = arr[0];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] < smallest && arr[i] % 2 === 0) {
+//       smallest = arr[i];
+//     }
+//   }
+//   return smallest;
+// };
+// smallestElement(array);
+
 // Среди элементов с нечетными номерами найдите наибольший элемент массива, который делится на 3.
+// const array = [12, 9, 6, 21, 19, 8, 12, 3, 7, 9];
+// const element = (arr) => {
+//   const newArray = [];
+//   for (let i = 0; i < arr.length; i += 2) {
+//     if (arr[i] % 3 === 0) {
+//       newArray.push(arr[i]);
+//     }
+//   }
+//   let result = 0;
+//   for (let i = 0; i < newArray.length; i += 1) {
+//     if (newArray[i] > result) {
+//       result = newArray[i];
+//     }
+//   }
+//   console.log(result);
+// };
+// element(array);
+
 // Дан массив и число p. Найдите два различных числа в массиве, сумма которых наиболее близка к p.
 // Дан массив. Найдите два соседних элемента, сумма которых минимальна.
 // Дан массив. Найдите три последовательных элемента в массиве, сумма которых максимальна.
